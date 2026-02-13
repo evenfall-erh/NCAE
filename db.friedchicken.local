@@ -1,0 +1,21 @@
+;
+; BIND data file for dns server
+;
+$TTL	604800
+@	IN	SOA	ns.friedchicken.local. admin.friedchicken.local (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns.friedchicken.local.
+ns	IN	A	192.168.21.10
+intranet	IN	A	192.168.21.30
+hr	IN	A	192.168.21.31
+finance	IN	A	192.168.21.32
+dev	IN	A	192.168.21.33
+qa	IN	A	192.168.21.34
+helpdesk	IN	A	192.168.21.35
+inventory	IN	A	192.168.21.36
+wiki	IN	A	192.168.21.37

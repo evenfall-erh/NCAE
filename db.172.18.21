@@ -1,0 +1,20 @@
+;
+; BIND reverse data file for dns server
+;
+$TTL	604800
+@	IN	SOA	ns.friedchicken.local. admin.example.local. (
+			      4		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns.friedchicken.local.
+
+5	IN	PTR	ns.friedchicken.com.
+6	IN	PTR	friedchicken.com.
+6	IN	PTR	www.friedchicken.com.
+6	IN	PTR	api.friedchicken.com.
+7	IN	PTR	status.friedchicken.com.
+8	IN	PTR	shop.friedchicken.com.
+9	IN	PTR	blog.friedchicken.com.

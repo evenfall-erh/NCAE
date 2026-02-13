@@ -1,0 +1,30 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind9/zones.rfc1918";
+
+zone "friedchicken.local" {
+	type master;
+	file "/etc/bind/db.friedchicken.local";
+	allow-query { 192.168.0.0/16; };
+};
+
+zone "21.168.192.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.192.168.21";
+	allow-query { 192.168.0.0/16; };
+};
+zone "friedchicken.com" {
+	type master;
+	file "/etc/bind/db.override";
+	allow-query { 172.18.0.0/16; };
+};
+
+zone "21.18.172.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.172.18.21";
+	allow-query { 172.18.0.0/16; };
+};

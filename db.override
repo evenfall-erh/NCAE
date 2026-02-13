@@ -1,0 +1,20 @@
+;
+; BIND data file for dns server
+;
+$TTL	604800
+@	IN	SOA	ns.friedchicken.local. admin.friedchicken.local (
+			      4		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns.friedchicken.local.
+
+ns.friedchicken.com.	IN A 172.18.21.5
+friedchicken.com.	IN A 172.18.21.6
+www IN CNAME friedchicken.com.
+api.friedchicken.com.	IN A 172.18.21.6
+status.friedchicken.com.	IN A 172.18.21.7
+shop.friedchicken.com.	IN A 172.18.21.8
+blog.friedchicken.com.	IN A 172.18.21.9
